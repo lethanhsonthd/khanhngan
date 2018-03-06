@@ -1,8 +1,5 @@
+const prod = process.env.NODE_ENV === 'production'
+
 module.exports = {
-  exportPathMap: function() {
-    return {
-      "/": { page: "/" }
-    };
-  },
-  assetPrefix: process.env.NODE_ENV === "production" ? "/khanhngan" : ""
-};
+  'process.env.BACKEND_URL': prod ? 'https://lethanhsonthd.github.io/khanhngan' : ''
+}
