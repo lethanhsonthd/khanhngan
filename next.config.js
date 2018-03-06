@@ -1,5 +1,8 @@
 module.exports = {
-  // some configuration
-  assetPrefix: isProduction ? '/{khanhngan}' : '',
-  // another configuration
-}
+  exportPathMap: function() {
+    return {
+      "/": { page: "/" }
+    };
+  },
+  assetPrefix: process.env.NODE_ENV === "production" ? "/khanhngan" : ""
+};
